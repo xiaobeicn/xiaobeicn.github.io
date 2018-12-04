@@ -239,7 +239,7 @@
 
     
         <meta property="article:published_time" content="Mon Dec 19 2016 00:00:00 GMT+0800">
-        <meta property="article:modified_time" content="Wed Apr 11 2018 15:23:36 GMT+0800">
+        <meta property="article:modified_time" content="Tue Dec 04 2018 17:25:47 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -262,7 +262,7 @@
     "mainEntityOfPage": "http://blog.sdk1024.com/2016/12/19/elasticsearch-dsl/index.html",
     "headline": "Elasticsearch-dsl",
     "datePublished": "Mon Dec 19 2016 00:00:00 GMT+0800",
-    "dateModified": "Wed Apr 11 2018 15:23:36 GMT+0800",
+    "dateModified": "Tue Dec 04 2018 17:25:47 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "宋小北",
@@ -503,7 +503,7 @@ $dslobj = new ElasticSearchDsl();
 $dslobj-&gt;select([&#39;id&#39;, &#39;district&#39;, &#39;block&#39;, &#39;citycode&#39;])
         -&gt;where([&#39;district&#39; =&gt; 1337])
         -&gt;orderby([&#39;id&#39; =&gt; &#39;desc&#39;])
-        -&gt;groupBy([&#39;block&#39; =&gt; [&#39;offset&#39; =&gt; 1, &#39;limit&#39; =&gt; 2, &#39;field&#39; =&gt; [&#39;district&#39;, &#39;block&#39;]], &#39;citycode&#39;])
+        -&gt;groupBy([&#39;block&#39; =&gt; [&#39;limit&#39; =&gt; 2], &#39;citycode&#39;])
         -&gt;limit(2)
         -&gt;offset(1);
 $dsl = $dslobj-&gt;build();
